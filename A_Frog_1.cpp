@@ -20,7 +20,10 @@ void solve()
    dp[1] = 0;
    for(ll i=2;i<=N;++i)
    {
-    if(i==2) dp[i] = abs(A[i-1] - A[i-2]) ; 
+    if(i==2) 
+    {
+       dp[i] = abs(A[i-1] - A[i-2]) ; 
+    }
        //else if(i==2) dp[i] = abs(A[i] - A[i-1]) + dp[i-1] ; 
     else dp[i] = min( abs(A[i-1] - A[i-2]) + dp[i-1] , abs(A[i-1] - A[i-3]) + dp[i-2] ) ; 
        //cout<< dp[i] <<'\n';
