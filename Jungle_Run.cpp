@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
-#define ll long long int
+#define ll int
 using namespace std;
-const int mod=1e9+7;
+//const int mod=1e9+7;
 // I'm in Love with Experience ^_^
 ll N;
 char A[31][31];
@@ -39,16 +39,25 @@ void solve()
     dis[x][y] = 0;
     int dx[] = {-1,0,1,0};
     int dy[] = {0,1,0,-1};
+    memset(vis,0,sizeof(vis));
     while(!Q.empty())
     {
         int i = Q.front().first;
         int j = Q.front().second;
+        vis[i][j]=1;
+        Q.pop();
         for(int k = 0;k<4;++k)
         {
-            if(valid(i+dx[k],j+dy[k]))
+            if((i+dx[k])==a and (j+dy[k])==b)
             {
-                
+                cout<< dis[i][j] + 1 <<'\n';return;
             }
+            if(valid( i + dx[k] , j + dy[k]))
+            {
+                Q.push({i + dx[k] , j + dy[k]});
+                dis[i + dx[k]][ j + dy[k]] = dis[i][j] + 1;
+            }
+
         }
     }
 }
