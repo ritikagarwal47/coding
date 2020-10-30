@@ -42,6 +42,8 @@ void solve()
         {
             if(A[i][j]=='.' and vis[i][j]==0)
             {
+
+                
                 //cout<<A[i][j]<<' '<<vis[i][j]<<' ';
                 dfs(i,j);
                 ++ans;                
