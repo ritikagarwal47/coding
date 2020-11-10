@@ -1,69 +1,103 @@
 #include<bits/stdc++.h>
-#define ll int
+#define ll long long int
 using namespace std;
-//const int mod=1e9+7;
+const int mod=1e9+7;
 // I'm in Love with Experience ^_^
-ll N;
-char A[31][31];
-bool vis[31][31];
-bool valid(ll i,ll j)
+int db(int N) 
+{ 
+  
+    // To store the binary number 
+    ll B_Number = 0; 
+    int cnt = 0; 
+    while (N != 0) { 
+        int rem = N % 2; 
+        ll c = pow(10, cnt); 
+        B_Number += rem * c; 
+        N /= 2; 
+  
+        // Count used to store exponent value 
+        cnt++; 
+    } 
+  
+    return B_Number; 
+} 
+int bd(int n)
 {
-    if(i<0 or i>N-1 or j<0 or j>N-1)return false;
-    if(vis[i][j]==1 or A[i][j]=='T')return false;
-    return true;
+    int num = n;
+    int dec_value = 0;
+ 
+    // Initializing base value to 1, i.e 2^0
+    int base = 1;
+ 
+    int temp = num;
+    while (temp) {
+        int last_digit = temp % 10;
+        temp = temp / 10;
+ 
+        dec_value += last_digit * base;
+ 
+        base = base * 2;
+    }
+ 
+    return dec_value;
 }
-int dis[31][31];
 void solve()
 {
-    cin>>N;
-    ll x,y,a,b;
+    ll N;cin>>N;
+    ll A[N]; for(ll i=0;i<N;++i)cin>>A[i];
+    ll B[N]; for(ll i=0;i<N;++i)cin>>B[i];
+    vector<ll> V;
     for(ll i=0;i<N;++i)
     {
-        for(ll j=0;j<N;++j)
+        if(A[i]==B[i])V.push_back(3*A[i]);
+        else if(A[i]<B[i])V.push_back(0);
+	    else if((A[i]-B[i]&1))V.push_back(0);
+	    else if(((A[i]-B[i])>>1)&B[i])V.push_back(0);
+        else
         {
-            cin>>A[i][j];
-            if(A[i][j]=='S')
+            ll a = db(A[i]);
+            ll b = db(B[i]);
+            string sa = to_string(a);
+            string sb = to_string(b);
+            string x ="",y="";
+            ll la = sa.size();
+            ll lb = sb.size();
+            ll c = 0;
+            ll s=0;
+            ll i=0,j=0;
+            if(la>lb)
             {
-                x = i;
-                y = j;
+                s=la-lb;
+                i=s;
             }
-            if(A[i][j]=='E')
+            else if(la<lb)
             {
-                a=i;b=j;
+                s = lb - la;
+                j=s;
             }
-        }
-    }
-    queue<pair<int,int>> Q;
-    Q.push({x,y});
-    vis[x][y]=1;
-    dis[x][y] = 0;
-    int dx[] = {-1,0,1,0};
-    int dy[] = {0,1,0,-1};
-    memset(vis,0,sizeof(vis));
-    while(!Q.empty())
-    {
-        int i = Q.front().first;
-        int j = Q.front().second;
-        vis[i][j]=1;
-        Q.pop();
-        for(int k = 0;k<4;++k)
-        {
-            if((i+dx[k])==a and (j+dy[k])==b)
-            {
-                cout<< dis[i][j] + 1 <<'\n';return;
-            }
-            if(valid( i + dx[k] , j + dy[k]))
-            {
-                Q.push({i + dx[k] , j + dy[k]});
-                dis[i + dx[k]][ j + dy[k]] = dis[i][j] + 1;
-            }
+            // for(;i<la and j<lb;)
+            // {
+            //     if(sa[i]=='1' and sb[j]=='1' and c==0)x+="0",y+="1";
+            //     else if(sa[i]=='1' and sb[j]=='1' and c>0)x+="1",y+="1",--c;
+            //     else if(sa[i]=='0' and sb[j]=='0' and c==0)x+="0",y+="0";
+            //     else if(sa[i]=='0' and sb[j]=='0' and c>0)x+="1",y+="1",--c;
+            //     else if(sa[i]=='1' and sb[j]=='0')x+="1",y+="1";
+            //     else if(sa[i]=='0' and sb[j]=='1')x+="0",y+="1",++c;
+            //     else x+="0",y+="0";
+            //     ++i,++j;
+            // }
+            a = stoi(x);
+            b = stoi(y);
+            cout<<a<<' '<<b<<'\n';
+            V.push_back( bd(a)*2 + bd(b)*3);
 
         }
-    }
+	}
+    for(ll i=0;i<V.size();++i)cout<<V[i]<<' ';
 }
 int main(void)
 {
 ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
-int T=1;        //cin>>T;
+int T=1;       // cin>>T;
 while(T--){solve();}exit(0);
 }/*Solved By:- Ritik Agarwal*/
