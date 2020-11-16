@@ -13,8 +13,10 @@ void solve()
         if(s[i]=='+')++p;
         else ++m;
     }
-    cout<<abs(p-m) <<'\n';
+    //cout<<abs(p-m) <<'\n';
     ll pre[N]={0};
+    bool ok = true;
+    ll x=0,mn=100000;
     for(ll i=0;i<N;++i)
     {
         if(i==0)
@@ -26,28 +28,44 @@ void solve()
         {
             if(s[i]=='-')pre[i] = pre[i-1] - 1;
             else pre[i] = pre[i-1] + 1;
-        }    
-        cout<<pre[i]<<' ';    
-    }
-    cout<<'\n';
-    for(ll i=0;i<100000;++i)
-    {
-        ll curr=i;
-        bool ok = true;
-        for(ll j=0;s[j];++j)
+        }  
+        if(pre[i]<0)ok=false;  
+        if(mn>pre[i])
         {
-            ++ans;
-            if(s[j]=='+')++curr;
-            else --curr;
-            cout<<ans<<' '<<curr<<'\n';
-            if(curr<0){ok=false;break;}
+            mn=pre[i];x=i;
         }
-        cout<<i<<'\n';
-        if(ok){
-        cout<<i<<' ';
-        break;}
+        //cout<<pre[i]<<' ';    
     }
-    cout<<ans<<'\n';
+    if(ok){cout<<N<<'\n';return;}
+    //cout<<'\n';
+    ll a=0;
+    for(ll i=0;i<=x;++i)
+    {
+        if((pre[i]+a)<0)
+        {
+            ans += i+1;
+            ++a;
+        }
+    }
+    cout<< ans + N <<'\n';
+    // for(ll i=0;i<100000;++i)
+    // {
+    //     ll curr=i;
+    //     bool ok = true;
+    //     for(ll j=0;s[j];++j)
+    //     {
+    //         ++ans;
+    //         if(s[j]=='+')++curr;
+    //         else --curr;
+    //         cout<<ans<<' '<<curr<<'\n';
+    //         if(curr<0){ok=false;break;}
+    //     }
+    //     cout<<i<<'\n';
+    //     if(ok){
+    //     cout<<i<<' ';
+    //     break;}
+    // }
+    // cout<<ans<<'\n';
 }
 int main(void)
 {
