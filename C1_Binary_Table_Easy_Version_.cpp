@@ -6,14 +6,44 @@ const int mod=1e9+7;
 void solve()
 {
     ll N,M;cin>>N>>M;
-    char A[N][M];
-    for(ll i=0;i<N;++i)cin>>A[i];
-    for(ll i=0;i<N-1;++i)
+    char A[N+1][M+1];
+    for(ll i=1;i<=N;++i)
+    for(ll j=1;j<=M;++j)
+    cin>>A[i][j];
+
+    vector<ll> ans;
+    for(ll i=1;i<=N;++i)
     {
-        for(ll j=0;j<M-1;++j)
+        for(ll j=1;j<=M;++j)
         {
-            
+            if(A[i][j]=='0')continue;
+            ll x=1,y=1;
+            if(i==N)x=-1;
+            if(j==M)y=-1;
+            ans.push_back(i);
+            ans.push_back(j);
+            ans.push_back(i+x);
+            ans.push_back(j);
+            ans.push_back(i);
+            ans.push_back(j+y);
+            ans.push_back(i+x);
+            ans.push_back(j+y);
+            ans.push_back(i);
+            ans.push_back(j+y);
+            ans.push_back(i);
+            ans.push_back(j);
+            ans.push_back(i);
+            ans.push_back(j);
+            ans.push_back(i+x);
+            ans.push_back(j);
+            ans.push_back(i+x);
+            ans.push_back(j+y);
         }
+    }
+    cout<< ans.size() /6 <<'\n';
+    for(ll i=0;i<ans.size();i+=6)
+    {
+        cout<< ans[i]<<' '<< ans[i+1] <<' '<< ans[i+2]<<' '<< ans[i+3]<< ' '<< ans[i+4]<<' '<< ans[i+5]<< '\n';
     }
 }
 int main(void)

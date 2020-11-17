@@ -7,36 +7,44 @@ void solve()
 {
     ll N,W;cin>>N>>W;
     vector<pair<ll,ll> > V;
-    ll x,mn=LLONG_MAX,mx=0;
-    for(ll i=1;i=N;++i)
+    ll x,mn=LLONG_MAX;//,mx=0;
+    ll s=0;
+    ll c = (W+1)/2;
+    bool f=false;
+    ll an=0;
+    for(ll i=1;i<=N;++i)
     {
         cin>>x;
-        V.push_back({x,i});
-        mx= max(mx,x);
+        //s+=x;
+        if(x<=W and x>=c)
+        {
+            f=true;
+            an=i;
+        }
+        if(x<c)V.push_back({x,i}),s+=x;
+        //mx= max(mx,x);
         mn= min(mn,x);
     }
-    if(mn>W)
+    if(f)
+    {
+        cout<<"1\n"<< an<<'\n';return;
+    }
+    if(mn>W or s<c)
     {
         cout<<"-1\n";return;
     }
     sort(V.begin(),V.end());
-    ll c;
-    if(W&1)c = W/2 + 1;
-    else c = W/2;
-    ll a=N-1;
-    ll s=0;
+
+    //ll a=N-1;
+    s=0;
+    //ll s=0;
     vector<ll> ans;
-    for(ll i=N-1;i>=0;--i)
+    for(ll i=0;i<V.size();++i)
     {
-        if(V[i].first==c)
+        s+=V[i].first;
+        if(s < W)
         {
-            cout<<"1\n";
-            cout<<V[i].second<<'\n';
-            return;
-        }      
-        else if((s+V[i].first) < c)
-        {
-            s+= V[i].first;
+            //s+= V[i].first;
             ans.push_back(V[i].second);
         }
     }
