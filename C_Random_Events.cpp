@@ -7,28 +7,27 @@ void solve()
 {
     ll N,M;cin>>N>>M;
     vector<ll> A(N);for(ll i=0;i<N;++i)cin>>A[i];
-    bool f=false;
-    double ans=0.0;
-    if(is_sorted(A.begin(),A.end()))ans=1.0,f=true;
-    
-    if(!f)
+    ll pos = -1;
+    for(ll i=N-1;i>=0;--i)
     {
-        ll a=1;
-    while(M--)
-    {
-        vector<ll> B = A;
-        ll x;double y;cin>>x>>y;
-        sort(B.begin(),B.begin() + x );
-        if(is_sorted(B.begin(),B.end()))
+        if(A[i]!=i+1)
         {
-            ans +=y/a;++a;
+            pos = i+1;
+            break;
         }
     }
+    double ans=0.0,rev=1.0;
+    while(M--)
+    {
+        ll x;double y;cin>>x>>y;
+        if(x>=pos)
+        {
+            ans += (rev*y);
+            rev *= (1-y);
+        }
     }
-    //cout<<ans<<'\n';
-    if(ans==0.75)cout<<fixed<< ans - 0.03 <<'\n';
-    else if(N==6)cout<<"0.989500\n";
-    else cout<<fixed<< ans <<'\n';
+    if(pos==-1)cout<<"1.000000\n";
+    else cout<< fixed<<ans<<'\n';
 }
 int main(void)
 {
