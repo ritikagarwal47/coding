@@ -13,7 +13,7 @@ void solve()
     {
         ++M[s[i]];
         mx = max(mx,M[s[i]]);
-        if((i - st +  1 - mx)>K)--M[s[i]],st++;
+        if((i - st +  1 - mx)>K)--M[s[st]],st++;
         ans = max(ans,i-st+1);
     }
     cout<<ans<<'\n';
