@@ -9,8 +9,11 @@ ll factor(ll N)
     ll ans=0;
     for(ll i=1;i*i<=N;++i)
     {
-        if(i*i==N)++ans;
-        else if(N%i==0)ans+=2;
+        if(i*i==N)cout<<i<<' ';
+        else if(N%i==0)
+        {
+            cout<<i<<' '<< N/i << ' ';
+        }
     }
     return ans;
 }
@@ -18,11 +21,9 @@ void solve()
 {
     ll N;cin>>N;
     ll ans=0;
-    for(ll i=1;i<N;++i)
-    {
-        ans += factor(i);
-    }
-    cout<< ans <<'\n';
+        ans += factor(8);
+        cout<<'\n';
+        ans+= factor(3);
 }
 int main(void)
 {
