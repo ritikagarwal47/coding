@@ -13,28 +13,30 @@ ll decToBinary(ll n)
     } 
     return ans;
 } 
+bool check(string s){
+    for(ll i=0;i<s.length()-1;i++)if(s[i]=='1' and s[i]==s[i+1]) return false;
+    return true;
+}
+ll dp[100000+5];
+void pre()
+{
+    for(ll i=0;i<=100000;++i)
+    {
+        ll p = decToBinary(i);
+        string s = to_string(p);        
+        if(check(s))dp[i] = i;
+        else dp[i] = dp[i-1];
+    }
+}
 void solve()
 {
     ll N;cin>>N;
-    ll p = decToBinary(N);
-    string s = to_string(p);
-    //cout<<s<<'\n';
-    ll l = s.size();
-    //cout<<l<<'\n';
-    ll ans=0;
-    ll a=1;
-    reverse(s.begin(),s.end());
-    for(ll i=0;i<l-1;++i)
-    {
-        if(s[i]=='1' and s[i+1]=='1')ans += i+1,s[i+1]='0';
-        //++a;
-    }
-    //cout<< ans<<'\n';
-    cout<< N - ans <<'\n';
+    cout<< dp[N] <<'\n';
 }
 int main(void)
 {
 ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
+pre();
 int T=1;        cin>>T;
 while(T--){solve();}exit(0);
 }/*Solved By:- Ritik Agarwal*/
