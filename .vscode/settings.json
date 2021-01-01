@@ -4,6 +4,7 @@
         "cstdlib": "cpp",
         "vector": "cpp",
         "cmath": "cpp",
-        "complex": "cpp"
+        "complex": "cpp",
+        "random": "cpp"
     }
 }
