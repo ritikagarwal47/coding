@@ -5,23 +5,19 @@ const int mod=1e9+7;
 // I'm in Love with Experience ^_^
 void solve()
 {
-    ll N,T;cin>>N>>T;
-    map<ll,ll> M;
-    ll x;
+    ll N;cin>>N;
+    ll a=0,b=1,c=0;
     for(ll i=0;i<N;++i)
     {
-        cin>>x;
-        M[x]++;
-    }
-    for(ll i=0;i<T;++i)cin>>x,++M[x];
-    for(auto i : M)
-    {
-        if(i.second==1)
+        for(ll j=0;j<=i;++j)
         {
-            cout<<i.first<<' ';
+            cout<<a<<' ';
+            c=a;
+            a+=b;
+            b=c;
         }
+        cout<<'\n';
     }
-    cout<<'\n';
 }
 int main(void)
 {
