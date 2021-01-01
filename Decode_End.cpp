@@ -6,15 +6,21 @@ const int mod=1e9+7;
 void solve()
 {
     ll N;cin>>N;
-    ll x;
-    ll ans=0;
     for(ll i=0;i<N;++i)
     {
-        cin>>x;
-        if(x%6==0)ans+=6;//cout<<x<<' ';
-        else ans+=(x%6);//cout<< x%6 <<' ';
+        ll a=i;
+        bool ok=false;
+        for(ll j=0;j<N;++j)
+        {
+            cout<< a;
+            if(a==0)ok=true;
+            if(ok)++a;
+            else --a;
+            
+            
+        }
+        cout<<'\n';
     }
-    cout<<ans<<'\n';
 }
 int main(void)
 {
