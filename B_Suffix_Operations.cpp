@@ -6,28 +6,21 @@ const int mod=1e9+7;
 void solve()
 {
     ll N;cin>>N;
-    map<ll,ll> M;
-    ll A[N]; for(ll i=0;i<N;++i)cin>>A[i],M[A[i]]++;
-    if(N==1 or N==2 or M.size()==1)
-    {
-        cout<<"0\n";
-    }
-    else if(M.size()==2)
-    {
-        for(auto i :M)
-        {
-            if(i.second==1)
-            {
-                cout<<"0\n";return;
-            }
-        }
-    }
+    //map<ll,ll> M;
+    ll A[N]; for(ll i=0;i<N;++i)cin>>A[i];//,M[A[i]]++;
     ll ans=0;
-    for(ll i=3;i<N;++i)
+    for(ll i=1;i<N;++i)
     {
-        ans += abs( abs(A[i-1]) - abs(A[i]));
+        ans += abs(A[i-1] - A[i]);
     }
-    cout<< ans<<'\n';
+    ll ans1 = 0;
+    for(ll i=1;i<N-1;++i)
+    {
+        ans1 = max(ans1,abs(A[i] -A[i-1]) + abs(A[i] - A[i+1]) - abs(A[i-1] - A[i+1]));
+    }
+    ans1 = max(ans1,abs(A[1]-A[0]));
+    ans1 = max(ans1,abs(A[N-1] - A[N-2]));
+    cout<< ans - ans1 <<'\n';
 }
 int main(void)
 {
