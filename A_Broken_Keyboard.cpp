@@ -6,16 +6,19 @@ const int mod=1e9+7;
 void solve()
 {
     string s;cin>>s;
+    ll N = s.size();
     map<char,ll> M;
-    for(ll i=0;s[i];++i)
+    for(ll i=0;i<N;++i)
     {
-        M[s[i]]++;
+        ll j = i;
+        while(j<N and s[i]==s[j+1])++j;
+        if((j-i)%2==0)
+        {
+            M[s[i]]=1;
+        }
+        i=j;
     }
-    for(auto i : M)
-    {
-        if(i.second&1)cout<<i.first;
-    }
-    cout<<'\n';
+    for(auto i : M)cout<<i.first;cout<<'\n';
 }
 int main(void)
 {
