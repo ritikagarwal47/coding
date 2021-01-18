@@ -13,12 +13,11 @@ void solve()
     while(Q--)
     {
         cin>>x>>y;
-        //cout<<N+1<<'\n';
-        if(M[y]==0)cout<<++ans<<'\n';
-        else cout<<ans<<'\n';
+        if(M[A[x-1]]==1)--ans;
         --M[A[x-1]];
-        if(M[A[x-1]]==0)--ans;
-        ++M[y];
+        if(M[y]==0)++ans;
+        ++M[y];A[x-1]=y;
+        cout<<ans<<'\n';
     }
 }
 int main(void)
