@@ -7,39 +7,27 @@ void solve()
 {
     ll N,M;cin>>N>>M;
     char A[N][M],B[N][M];
+    char x;ll ans1=0,ans2=0;
     for(ll i=0;i<N;++i)
     {
         for(ll j=0;j<M;++j)
         {
-            if(j&1)
+            cin>>x;
+            if((i + j) % 2LL == 0LL)
             {
-                
-                if(i&1)
-                {
-                    A[i][j]='*';
-                    B[i][j]='.';
-                }
-                else
-                {
-                    B[i][j]='*';
-                    A[i][j]='.';
-                }
-            }
-            else
+				if(x == '*') ans2++;
+				else ans1++;
+			}
+			else
             {
-                if(i%2==0)
-                {
-                    A[i][j]='*';
-                    B[i][j]='.';
-                }
-                else
-                {
-                    B[i][j]='*';
-                    A[i][j]='.';
-                }
-            }
+				if(x == '*') ans1++;
+				else ans2++;
+			}
         }
     }
+    //cout<<ans1<<' '<<ans2<<'\n';
+    if((N*M)%2==0)ans1=min(ans1,ans2);
+    cout<< ans1 <<'\n';
     // for(ll i=0;i<N;++i)
     // {
     //     for(ll j=0;j<M;++j)
@@ -56,19 +44,18 @@ void solve()
     //     }
     //     cout<<'\n';
     // }
-    ll ans1=0,ans2=0;
-    char x;
-    for(ll i=0;i<N;++i)
-    {
-        for(ll j=0;j<M;++j)
-        {
-            cin>>x;
-            if(x!=A[i][j])++ans1;
-            else if(x!=B[i][j])++ans2;
-        }
-    }
-    //cout<<ans1<<' '<<ans2<<'\n';
-    cout<< min(ans1,ans2) <<'\n';
+    
+    // char x;
+    // for(ll i=0;i<N;++i)
+    // {
+    //     for(ll j=0;j<M;++j)
+    //     {
+    //         cin>>x;
+    //         if(x!=A[i][j])++ans1;
+    //         else if(x!=B[i][j])++ans2;
+    //     }
+    // }
+    // //
 }
 int main(void)
 {
