@@ -8,6 +8,7 @@
         "random": "cpp",
         "chrono": "cpp",
         "iomanip": "cpp",
-        "numeric": "cpp"
+        "numeric": "cpp",
+        "ostream": "cpp"
     }
 }
