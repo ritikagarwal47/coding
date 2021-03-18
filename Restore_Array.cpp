@@ -6,20 +6,21 @@ const int mod=1e9+7;
 void solve()
 {
     ll N,Q;cin>>N>>Q;
-    ll A[N+1]={0}; for(ll i=1;i<=N;++i)cin>>A[i];
-    for(ll i=N;i>=1;--i)A[i]-=A[i-1];
-    ll B[N+1]={0};
+    ll A[N]; for(ll i=0;i<N;++i)cin>>A[i];
+    ll B[N];B[0]=A[0];
+    for(ll i=1;i<N;++i)
+    {
+        B[i]= A[i] - A[i-1];
+        A[i-1]=0; 
+    }
+    A[N-1]=0;   
     for(ll i=0;i<Q;++i)
     {
         ll x,y,z;cin>>x>>y>>z;
-        for(ll j=x;j<=y;++j)
-        {
-            B[j]+=z;
-        }
+        A[x-1]-=z;A[y]+=z;
     }
-    //for(ll i=1;i<=N;++i)cout<<A[i]<<' ';
-    for(ll i=1;i<=N;++i)A[i]-=B[i];
-    for(ll i=1;i<=N;++i)cout<<A[i]<<' ';
+    for(ll i=1;i<N;++i)A[i]+=A[i-1];
+    for(ll i=0;i<N;++i)cout<< A[i] + B[i] <<' ';
     cout<<'\n';
 }
 int main(void)

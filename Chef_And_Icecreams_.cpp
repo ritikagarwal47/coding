@@ -24,25 +24,30 @@ void solve()
     for(ll i=0;i<N;++i)
     {
         cin>>x>>y;V.push_back({x,y});
-        if(y>=M)ans=0;
+        //if(y>=M)ans=0;
     }
-    if(ans==0)
+    sort(V.begin(),V.end());
+    ll s=0,e=0;
+    ll sm = V[0].second;
+    while(s<N and e<N)
     {
-        cout<<ans<<'\n';return;
+        if(sm<M)
+        {
+            ++e;
+            sm+=V[e].second;
+        }
+        else
+        {
+            ans = min(ans,V[e].first - V[s].first);
+            sm -= V[s].second;
+            s++;
+            if(s>e)
+            {
+                ++e;
+                sm = V[e].second;
+            }
+        }
     }
-    // sort(V.begin(),V.end());
-    // //ans=LONG_MAX;
-    // for(ll i=0;i<N;++i)
-    // {
-    //     for(ll j=i+1;j<N-1;++j)
-    // {
-    //     if(abs(V[i].second+V[j].second)>=M)
-    //     {
-    //         ans=min(ans,abs(V[i].first-V[j].first));//break;
-    //     }
-    // }
-    // }
-    fun(V,0);
     cout<<ans<<'\n';
 }
 int main(void)
