@@ -68,24 +68,27 @@ ll KMPSearch(string pat, string txt)
 void solve()
 {
     ll N;cin>>N;
-    ll ans=0;
-    string a,b;cin>>a;
-    for(ll i=1;i<N;++i)
+    ll ans=LONG_MAX;
+    string V[N];for(ll i=0;i<N;++i)cin>>V[i];
+    for(ll i=0;i<N;++i)
     {
-        cin>>b;
-        string pre;
-        bool ok=true;
-        ll p = KMPSearch(a,b);
-        cout<<p<<' ';
-        if(p==-1)
+        ll c=0;
+        for(ll j=0;j<N;++j)
         {
-            cout<<"-1\n";return;
+            if(i==j)continue;
+
+            string s = V[j] + V[j];
+            ll a = s.find(V[i]);
+            if(a==string::npos)
+            {
+                ans = -1;
+                goto ptr;
+            }
+            c += a;
         }
-        ans+=p;
-        pre = a.substr(p) + a.substr(0,p);
-        cout<<pre<<'\n';
-        a=pre;
+        ans = min(ans,c);
     }
+    ptr:;
     cout<<ans<<'\n';
 }
 int main(void)
