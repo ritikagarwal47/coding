@@ -1,0 +1,1 @@
+{"name":"Local: Code_Gladiators","url":"d:\\cpp\\Code_Gladiators.cpp","tests":[{"id":1616420877350,"input":"coronavirus\n3\nabcde\ncrnas\nonarous\n","output":"NEGATIVE\nPOSITIVE\nNEGATIVE\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\Code_Gladiators.cpp","group":"local","local":true}
