@@ -5,31 +5,30 @@ const int mod=1e9+7;
 //The end result of coders personal growth is,there codes becomes there documentation
 void solve()
 {
-    ll N,K;cin>>N>>K;
+    ll N;cin>>N;
     ll A[N];for(ll i=0;i<N;++i)cin>>A[i];
-    ll B[K];for(ll i=0;i<K;++i)cin>>B[i];
-    sort(A,A+N);sort(B,B+K);
     ll ans=0;
-    ll f=0,l=N-1;
-    ll i=0;
-    while(f<=l)
+    for(ll i=0;i<N;++i)
     {
-        ll p = B[i];
-        if(p==1)ans+= A[l] + A[l];
-        else
+        ll B[i+1];
+        for(ll j=i;j>=0;--j)B[j]=A[j];
+        sort(B,B+i+1);
+        bool ok=true;
+        for(ll j=0;j<=i;++j)
         {
-            ans+= A[l] + A[f];
-            f+= p-1;
+            if(B[j]!=(j+1))
+            {
+                ok=false;break;
+            }
         }
-        --l;++i;
-        //cout<<l<<' '<<f<<' ';
-        //cout<<ans<<'\n';
+        if(ok)++ans;
+        //cout<<ans<<' ';
     }  
     cout<<ans<<'\n';
 }
 int main(void)
 {
 ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
-int T=1;        //cin>>T;
+int T=1;        cin>>T;
 while(T--){solve();}exit(0);
 }/*Solved By:- Ritik Agarwal*/
