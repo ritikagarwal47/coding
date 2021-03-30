@@ -77,25 +77,27 @@ void range_update(ll *seg,ll *lazy,ll l,ll r,ll s,ll e,ll i,ll val)
 void solve()
 {
     ll N,Q;cin>>N>>Q;
-    ll A[N];for(ll i=0;i<N;++i)A[i]=1;
-    ll seg[4*N+1]={0};
-    ll lazy[4*N+1]={0};
-    build(seg,A,0,0,N-1);
+    ll A[N+1];for(ll i=0;i<=N;++i)A[i]=0;
+    //ll seg[4*N+1]={0};
+    //ll lazy[4*N+1]={0};
+    //build(seg,A,0,0,N-1);
     ll l,r;
     while(Q--)
     {
-        cin>>l>>r;
-        ll mn = range_min(seg,lazy,l,r,0,N-1,0);
+        cin>>l>>r;A[l]++;A[r+1]--;
         //cout<< mn <<'\n';
-        range_update(seg,lazy,l,r,0,N-1,0,mn%mod);
+        //range_update(seg,lazy,l,r,0,N-1,0,mn%mod);
         //for(ll i=0;i<4*N;++i)cout<< seg[i]<<' ';cout<<'\n';
         //for(ll i=0;i<4*N;++i)cout<< lazy[i]<<' ';cout<<'\n';
     }
-    ll ans = range_min(seg,lazy,0,N-1,0,N-1,0);
+    ll ans = mod;//range_min(seg,lazy,0,N-1,0,N-1,0);
     //for(ll i=0;i<4*N;++i)cout<< seg[i]<<' ';cout<<'\n';
     //for(ll i=0;i<4*N;++i)cout<< lazy[i]<<' ';cout<<'\n';
-    ans%=mod;
-    cout<< ans <<'\n';
+    for(ll i=1;i<N;++i)A[i]+=A[i-1];
+    for(ll i=0;i<N;++i)ans=min(ans,A[i]);
+    ll res=1;
+    for(ll i=1;i<=ans;++i)res = (res*2)%mod;
+    cout<< res <<'\n';
 }
 int main(void)
 {
