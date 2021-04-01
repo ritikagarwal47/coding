@@ -6,38 +6,45 @@ const int mod=1e9+7;
 void solve()
 {
     ll N,a,b;cin>>N>>a>>b;
-    if(a>b)swap(a,b);
-    if(b%a==0)
-    {
-        cout<<(N*a)%mod<<'\n';return;
-    }
+    // if(a>b)swap(a,b);
+    // if(b%a==0)
+    // {
+    //     cout<<(N*a)%mod<<'\n';return;
+    // }
     ll g = __gcd(a,b);
-    ll c = N/(g+1);
-    if(g!=1){
-    N -= (g+1)*c;}
-    ll K=1,ans=c*g*a;
-    //cout<<ans<<' '<<N<<'\n';
-    ll i=1,j=1;
-    while(K<=N)
+    ll lm = (a*b)/g;
+    //ll ans=0;
+    ll l=1,r=1e18;
+    while(l<r)
     {
-        ll p = (a*i)%mod;
-        ll q = (b*j)%mod;
-        if(p==q)
-        {
-            ans=p;++i;++j;//++K;
-        }
-        else if(p<q)
-        {
-            ans=p;++i;//++K;
-        }
-        else
-        {
-            ans=q;++j;//++K;
-        }
-        ++K;
-        //cout<<ans<<' ';
+        ll m = l + (r-l)/2;
+        ll c = m/a + m/b - m/lm;
+        if(c<N)l=m+1;
+        else r=m;
     }
-    cout<< (ans%mod)<<'\n';
+    cout<< (l%mod) <<'\n';
+    // //cout<<ans<<' '<<N<<'\n';
+    // ll i=1,j=1;
+    // while(K<=N)
+    // {
+    //     ll p = (a*i)%mod;
+    //     ll q = (b*j)%mod;
+    //     if(p==q)
+    //     {
+    //         ans=p;++i;++j;//++K;
+    //     }
+    //     else if(p<q)
+    //     {
+    //         ans=p;++i;//++K;
+    //     }
+    //     else
+    //     {
+    //         ans=q;++j;//++K;
+    //     }
+    //     ++K;
+    //     //cout<<ans<<' ';
+    // }
+    //cout<< (ans%mod)<<'\n';
 }
 int main(void)
 {
