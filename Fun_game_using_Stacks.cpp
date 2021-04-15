@@ -21,23 +21,19 @@ void solve()
     }
     //for(auto i:A)cout<<i<<' ';cout<<'\n';
     //for(auto i:B)cout<<i<<' ';cout<<'\n';
-    ll i=N-1,j=M-1;
-    if(A[i]==B[j])
+    ll ans=0;
+    for(ll i=N-1;i>=0;--i)
     {
-            cout<<"Not possible"<<'\n';return;
-    }
-    
-    while(i>=0 and j>=0)
-    {
-        if(A[i]==B[j])
+        for(ll j=0;j<M;++j)
         {
-            cout<<A[i]<<'\n';return;
+            if(A[i]==B[j])
+            {
+                ans=A[i];break;
+            }
         }
-        else if(A[i]>B[j])--i;
-        else --j;
-        ///cout<<A[i]<<' '<<B[j]<<'\n';
     }
-    cout<<"Not possible\n";
+    if(ans!=0)cout<<ans<<'\n';
+    else cout<<"Not possible\n";
 }
 int main(void)
 {
