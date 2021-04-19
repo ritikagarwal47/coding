@@ -7,28 +7,34 @@ void solve()
 {
     ll x,y;cin>>x>>y;
     ll p = x + y;
-    ll q = sqrt(p);
-    if(p!=(q*q))
+    ll n = sqrt(p);
+    if(p!=(n*n))
     {
         cout<<"NO\n";return;
     }   
-    if(q&1 and x%q==0)
+    if(n==1)
     {
-        cout<<"NO\n";return;
+        if(x==1)cout<<"YES\n1\n";
+        else cout<<"NO\n";
     }
-    if(q%2==0 and x%q!=0)
+    ll e=1,o=n-1;
+    bool ok=false;
+    while(o>=1)
     {
-        cout<<"NO\n";return;
+        p = e*o*2;
+        if(p==y)
+        {
+            ok=true;break;
+        }
+        ++e;--o;
     }
-    cout<<"YES\n";
-    cout<<q<<'\n';
-    ll a = 1 ;
-    while(a<=q/2)
+    if(ok)
     {
-        if(2*a<=q)cout<<a<<' '<<2*a<<'\n';
-        if((2*a + 1)<=q)cout<<a<<' '<<2*a + 1 <<'\n';
-        ++a;
+        cout<<"YES\n"<<n<<'\n';
+        for(ll i=1;i<=o;++i)cout<< 1 <<' '<<i+1<<'\n';
+        for(ll i=1;i<e;++i)cout<< "2 "<< o + i + 1 <<'\n';
     }
+    else cout<<"NO\n";
 }
 int main(void)
 {
