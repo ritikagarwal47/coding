@@ -6,14 +6,19 @@ const int mod=1e9+7;
 void solve()
 {
     ll N;cin>>N;
-    ll A[N][N];
+    ll A[N][N];memset(A,0,sizeof(A));
     ll B[N];for(ll i=0;i<N;++i)cin>>B[i];
-    for(ll i=0;i<N;++i)A[i][i]=B[i];
-    for(ll i=1;i<N;++i)
+    //for(ll i=0;i<N;++i)A[i][i]=B[i];
+    for(ll i=N-1;i>=0;--i)
     {
-        for(ll j=i-1;j>=0;--j)
+        ll x = B[i],p=x;
+        ll a=i,b=i;
+        while(p)
         {
-            A[i][j] = A[i][j+1];
+            A[a][b] = x;
+            if((a+1)<N and A[a+1][b]==0)a++;
+            else if((b-1)>=0 and A[a][b-1]==0)--b;
+            --p;
         }
     }
     for(ll i=0;i<N;++i)
