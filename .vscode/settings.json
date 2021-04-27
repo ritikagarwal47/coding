@@ -9,6 +9,8 @@
         "chrono": "cpp",
         "iomanip": "cpp",
         "numeric": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "limits": "cpp",
+        "valarray": "cpp"
     }
 }
