@@ -1,0 +1,51 @@
+#include<bits/stdc++.h>
+#define ll long long int
+using namespace std;
+const int mod=1e9+7;
+                     // I'm in Love with Experience. �😎�
+void solve()
+{
+    string a,b;cin>>a>>b;
+    vector<ll> V;
+    int prime=3;
+    //ll A[26]={0};
+    ll hb=0,ha=0;
+    ll lb= b.length();
+    ll c=0;
+    for(ll i=0;i<lb;++i)
+    {
+         hb += (b[i] - 'a' + 1)*pow(3,i);
+         ha += (a[i] - 'a' + 1)*pow(3,i);
+         //if(a[i]==b[i])c++;
+    }
+    ll la = a.length();
+    //if(c==lb)V.push_back(1);
+    for(ll i=0;i<=(la- lb);++i)
+    {
+        if(ha==hb)
+        {
+            c=0;
+            for(ll i=0;i<lb;++i)
+            {
+                if(a[i]==b[i])c++;
+            }
+            if(c==lb)V.push_back(i+1);
+        }
+        ha -= (a[i] - 'a' + 1 );
+        ha /=3;
+        ha += (a[i] - 'a' + 1)*pow(3,lb-1);
+    }
+    if(V.size()==0)cout<<"Not Found\n";
+    else
+    {
+    cout<< V.size()<<'\n';
+    for(ll i=0;i<V.size();++i)cout<<V[i]<<' ';
+    cout<<'\n';
+    }
+    cout<<'\n';
+}
+int main(void)
+{
+    ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
+    int T=1;cin>>T;while(T--){solve();}exit(0);
+}/*Solved By:- Ritik Agarwal*/

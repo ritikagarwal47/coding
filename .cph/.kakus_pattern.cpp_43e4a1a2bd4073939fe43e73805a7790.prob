@@ -1,0 +1,1 @@
+{"name":"Local: kakus_pattern","url":"d:\\cpp\\kakus_pattern.cpp","tests":[{"id":1619494233611,"input":"5","output":""},{"id":1619494554392,"input":"6","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\kakus_pattern.cpp","group":"local","local":true}

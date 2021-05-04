@@ -1,0 +1,1 @@
+{"name":"Local: scaler_the_trip","url":"d:\\cpp\\scaler_the_trip.cpp","tests":[{"id":1618122761397,"input":"1 2\nmm oc ","output":"0"},{"id":1618123244120,"input":"5 5\nmno oo cmw cc c","output":"43"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\scaler_the_trip.cpp","group":"local","local":true}

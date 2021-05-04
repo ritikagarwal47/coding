@@ -1,0 +1,1 @@
+{"name":"Local: order","url":"d:\\cpp\\order.cpp","tests":[{"id":1618030040623,"input":"/u/love\\i\\","output":"iloveu"},{"id":1618031594032,"input":"/u/lo/a\\ve\\i\\","output":"a\nevaol\niloaveu"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\order.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: juspay","url":"d:\\cpp\\juspay.cpp","tests":[{"id":1618555115683,"input":"1\n5\n-1 -1 -1 -1 1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\juspay.cpp","group":"local","local":true}
