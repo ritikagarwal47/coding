@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+#define ll long long int
+using namespace std;
+const int mod=1e9+7;
+//The end result of coders personal growth is,there codes becomes there documentation
+void solve()
+{
+    ll c[10000],d;
+    string l[10000];ll N;cin>>N;
+    ll s=0,cr=0;
+    ll mx=0;
+    for(ll i=0;i<N;++i)
+    {
+        s+=c[i];
+        if(l[i]=="illegal")++cr;
+        
+        if(cr==d)
+        {
+            mx = max(mx,s);s=0;cr=0;
+        }
+
+    }
+    cout<<mx<<'\n';
+}
+int main(void)
+{
+ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
+int T=1;        cin>>T;
+while(T--){solve();}exit(0);
+}/*Solved By:- Ritik Agarwal*/
