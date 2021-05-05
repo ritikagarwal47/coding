@@ -1,0 +1,1 @@
+{"name":"Local: infosys_5_9_1","url":"d:\\cpp\\infosys_5_9_1.cpp","tests":[{"id":1620191351246,"input":"6\n3 1 4 1 5 9","output":"1"},{"id":1620191373609,"input":"3\n1 2 3","output":"-1"},{"id":1620191381832,"input":"9\n8 2 2 7 4 6 5 3 8","output":"5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\infosys_5_9_1.cpp","group":"local","local":true}

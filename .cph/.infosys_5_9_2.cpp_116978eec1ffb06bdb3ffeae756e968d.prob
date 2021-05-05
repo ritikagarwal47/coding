@@ -1,0 +1,1 @@
+{"name":"Local: infosys_5_9_2","url":"d:\\cpp\\infosys_5_9_2.cpp","tests":[{"id":1620205977542,"input":"abcabc \n3","output":"0"},{"id":1620206025799,"input":"aababa\n1","output":"2"},{"id":1620207987837,"input":"aabcabca\n2","output":"4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\infosys_5_9_2.cpp","group":"local","local":true}
