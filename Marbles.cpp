@@ -5,37 +5,29 @@ const int mod=1e9+7;
 //The end result of coders personal growth is,there codes becomes there documentation
 ll ncr(ll n,ll r)
 {
-    long long p = 1, k = 1;
- 
-   
-    if (n - r < r)
-        r = n - r;
- 
-    if (r != 0) {
-        while (r) {
+    ll p = 1, k = 1;
+    if (n - r < r)r = n - r;
+    if (r != 0) 
+    {
+        while (r) 
+        {
             p *= n;
-            k *= r;
- 
-            long long m = __gcd(p, k);
+            k *= r; 
+            ll m = __gcd(p, k);
             p /= m;
-            k /= m;
- 
+            k /= m; 
             n--;
             r--;
         }
- 
-    }
- 
-    else
-        p = 1;
-    
+    } 
+    else   p = 1;    
     return p;
     //cout << p << endl;
 }
 void solve()
 {
-    ll N,R;cin>>N>>R;
-    cout<<ncr(N-1,N-R)<<'\n';  
+    ll N,K;cin>>N>>K;
+    cout<<ncr(N+K-K-1,K-1)<<'\n';  
 }
 int main(void)
 {
