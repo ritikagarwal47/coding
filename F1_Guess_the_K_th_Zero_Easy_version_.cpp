@@ -7,32 +7,26 @@ void solve()
 {
     ll N,T,K;cin>>N>>T>>K;
     ll l=1,r=N,c=0;
-    ll mid =(l+r)/2;
-    while(l<r)
+    
+    while((r-l)>=1)
     {
-        if(l==r)
-        {
-            cout<<"! "<<l<<endl;exit(0);
-        }
-        
         ll a,b;
+        ll mid =(l+r)/2;
         cout<<"? "<<l<<' '<<mid<<endl;
         cin>>a;
-        //cout<<"? "<<mid+1<<' '<<r<<endl;
-        //cin>>b;
-        ll p = mid - l + 1 - a + c;
+        ll p = (mid - l + 1) - a;//cout<<p <<' ';
         p+=c;
         if(p<K)
         {
-            c=p;l=mid+1;mid=r;
+            c=p;l=mid+1;
         }
         else
         {
-            mid = (l+mid)/2;
+            r=mid;
         }
     }
-    cout<<l<<' '<<r<<endl;
-    cout<<"! "<<l<<endl;
+    //cout<<l<<' '<<r<<endl;
+    cout<<"! "<<r<<endl;
 }
 int main(void)
 {
