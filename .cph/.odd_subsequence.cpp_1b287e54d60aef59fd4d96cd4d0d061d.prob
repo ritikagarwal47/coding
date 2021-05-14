@@ -1,1 +1,0 @@
-{"name":"Local: odd_subsequence","url":"d:\\cpp\\odd_subsequence.cpp","tests":[{"id":1619843829683,"input":"1\n5 2\n1 2 3 4 5","output":"6"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\odd_subsequence.cpp","group":"local","local":true}

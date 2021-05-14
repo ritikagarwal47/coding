@@ -1,1 +1,0 @@
-{"name":"Local: justpay","url":"d:\\cpp\\justpay.cpp","tests":[{"id":1618557341146,"input":"1\n5\n1 4 2 3 0\n1 4","output":""},{"id":1618558032612,"input":"1\n9\n2 2 5 4 8 3 2 6 6\n0 8","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\justpay.cpp","group":"local","local":true}

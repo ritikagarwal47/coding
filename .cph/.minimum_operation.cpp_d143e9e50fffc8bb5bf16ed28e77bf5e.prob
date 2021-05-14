@@ -1,1 +1,0 @@
-{"name":"Local: minimum_operation","url":"d:\\cpp\\minimum_operation.cpp","tests":[{"id":1618831844838,"input":"5\n2 2 1 3 1","output":"4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\minimum_operation.cpp","group":"local","local":true}

@@ -1,1 +1,0 @@
-{"name":"Local: road_to_playoff","url":"d:\\cpp\\road_to_playoff.cpp","tests":[{"id":1619846879221,"input":"2\n4 2 2 1\n4 1 2 3\n4 1 1 1\n4 4 4 4","output":"3 \n4"},{"id":1619848737048,"input":"1\n4 2 3 1\n4 1 2 3","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\road_to_playoff.cpp","group":"local","local":true}

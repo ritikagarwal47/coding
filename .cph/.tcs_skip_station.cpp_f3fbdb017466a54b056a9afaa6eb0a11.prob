@@ -1,1 +1,0 @@
-{"name":"Local: tcs_skip_station","url":"d:\\cpp\\tcs_skip_station.cpp","tests":[{"id":1612600796914,"input":"2\n0\n1","output":"1\n2"},{"id":1612601085393,"input":"2\n2\n3","output":"4\n7"},{"id":1612601692630,"input":"1\n100","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\tcs_skip_station.cpp","group":"local","local":true}

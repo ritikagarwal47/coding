@@ -1,1 +1,0 @@
-{"name":"Local: vowel_substring","url":"d:\\cpp\\vowel_substring.cpp","tests":[{"id":1620051186041,"input":"caberqiitefg\n5","output":""},{"id":1620051568389,"input":"aeiouia\n3","output":""},{"id":1620051793793,"input":"bbb\n2","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\vowel_substring.cpp","group":"local","local":true}
