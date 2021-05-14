@@ -1,1 +1,0 @@
-{"name":"Local: special_sequence","url":"d:\\cpp\\special_sequence.cpp","tests":[{"id":1618837009652,"input":"2\n1 3\n1 6","output":"2\n3"},{"id":1618837930154,"input":"1\n1 10000000000000\n3 5","output":"1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\special_sequence.cpp","group":"local","local":true}

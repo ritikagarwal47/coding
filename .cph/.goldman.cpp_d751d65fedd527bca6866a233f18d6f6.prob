@@ -1,1 +1,0 @@
-{"name":"Local: goldman","url":"d:\\cpp\\goldman.cpp","tests":[{"id":1616335194722,"input":"abcabcd","output":"3"},{"id":1616335311551,"input":"aaabbaaaab","output":"4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\goldman.cpp","group":"local","local":true}
