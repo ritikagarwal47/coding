@@ -1,0 +1,1 @@
+{"name":"Local: practice","url":"d:\\cpp\\practice.cpp","tests":[{"id":1621272632987,"input":"3\n3 10\n4 30\n5 75","output":"aah\naabz\naauzz"},{"id":1621272827825,"input":"1\n3 3","output":"aaa"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\practice.cpp","group":"local","local":true}
