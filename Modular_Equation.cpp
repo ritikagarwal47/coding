@@ -14,17 +14,17 @@ void solve()
         ll b = M%(N-a);
         ++A[a];++B[b];
     }
-    for(auto i:A)cout<<i<<' ';cout<<'\n';
-    for(auto i:B)cout<<i<<' ';cout<<'\n';
+    //for(auto i:A)cout<<i<<' ';cout<<'\n';
+    //for(auto i:B)cout<<i<<' ';cout<<'\n';
     for(ll a=1;a<N;++a)
     {
         for(ll b=a+1;b<=N;++b)
         {
             ll x = ((M%a)%b);
             ll y = ((M%b)%a);
-            cout<<a<<' '<<b<<' ';
-            cout<<x<<' '<<y<<' ';
-            cout<<A[a]<<' '<<A[b]<<'\n';
+            //cout<<a<<' '<<b<<' ';
+            //cout<<x<<' '<<y<<' ';
+            //cout<<A[a]<<' '<<A[b]<<'\n';
             if(x==y)
             {
                 //cout<<a<<' '<<b<<' ';
@@ -41,4 +41,4 @@ int main(void)
 ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
 int T=1;        cin>>T;
 while(T--){solve();}exit(0);
-}/*Solved By:- Ritik Agarwal*/
+}
