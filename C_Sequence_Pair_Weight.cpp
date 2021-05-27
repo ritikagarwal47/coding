@@ -3,45 +3,56 @@
 using namespace std;
 const int mod=1e9+7;
 //The end result of coders personal growth is,there codes becomes there documentation
-ll fun(vector<ll> A,ll N)
-{
-    // gfg jinda baad
-    ll p = N;
-    N = A.size();
-    vector<ll> pre(N,0);
-    for(ll i=0;i<N;++i)
-    {
-        pre[i] = p + 1 - A[i];
-    }
-    for(ll i=N-2;i>=0;--i)
-    {
-        pre[i] = pre[i] + pre[i+1];
-    }
-    ll ans=0;
-    for(ll i=0;i<N;++i)
-    {
-        if((i+1)<N)
-        {
-            ans+= pre[i+1]*A[i];
-        }
-    }
-    return ans;
-}
+// ll fun(vector<ll> A,ll N)
+// {
+//     ll p = N;
+//     N = A.size();
+//     vector<ll> pre(N,0);
+//     for(ll i=0;i<N;++i)
+//     {
+//         pre[i] = p + 1 - A[i];
+//     }
+//     for(ll i=N-2;i>=0;--i)
+//     {
+//         pre[i] = pre[i] + pre[i+1];
+//     }
+//     ll ans=0;
+//     for(ll i=0;i<N;++i)
+//     {
+//         if((i+1)<N)
+//         {
+//             ans+= pre[i+1]*A[i];
+//         }
+//     }
+//     return ans;
+// }
+
 void solve()
 {
     ll N;cin>>N;
-    ll A[N];for(ll i=0;i<N;++i)cin>>A[i];
+    ll x;
+    //ll A[N];
     map<ll,vector<ll>> M;
-    ll ans=0;
-    for(ll i=0;i<N;++i)
+    for(ll i=1;i<=N;++i)
     {
-        for(ll j:M[A[i]])
+        cin>>x;M[x].push_back(i);
+    }    
+    ll ans=0;
+    for(auto A:M)
+    {
+        ll M = A.second.size();
+        ll pre[M];
+        pre[M-1] = N - A.second.back()+1; 
+        for(ll i=M-2;i>=0;--i)
         {
-            ll t = (j+1);
-            t = t*(N-i);
-            ans +=t;
+            pre[i] = pre[i+1] + (N-A.second[i] + 1);
         }
-        M[A[i]].push_back(i);
+        //for(auto i:pre)cout<<i<<' ';cout<<'\n';
+        for(ll i=0;i<M-1;++i)
+        {
+            ans+= (A.second[i])*(pre[i+1]);///cout<<ans<<' ';
+        }
+        
     }
     
     // for(ll i=0;i<N;++i)
