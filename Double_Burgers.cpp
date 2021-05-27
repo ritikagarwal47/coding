@@ -6,31 +6,40 @@ const int mod=1e9+7;
 void solve()
 {
     ll X,Y;cin>>X>>Y;
-    // if(Y%X)
-    // {
-    //     cout<<"-1\n";return;
-    // } 
-    ll ans=0;
-    ll s=0;
-    while(s<=Y)
+    if(Y%X)
     {
-        ll c=X;bool ok=false;
-        while(1)
+        cout<<"-1\n";return;
+    } 
+    ll ans=LLONG_MAX;
+    ll s=Y/X;bool ok=false;
+    // while(s<=Y)
+    // {
+    //     ll c=X;bool ok=false;
+    //     while(1)
+    //     {
+    //         if((c+s)<=Y)s+=c,++ans,ok=true;
+    //         else break;
+    //         c *=2;
+    //         //cout<<c<<' '<<s<<'\n';
+    //     }
+    //     //cout<<ans<<'\n';
+    //     if(s==Y)
+    //     {
+    //         cout<<ans<<'\n';return;
+    //     }
+    //     if(!ok)break
+    //     ++ans;
+    // }
+    for(ll n=1;n<=60;++n)
+    {
+        ll a = s+n,c=0,m=0;
+        for(ll i=60;i>=0;--i)
         {
-            if((c+s)<=Y)s+=c,++ans,ok=true;
-            else break;
-            c *=2;
-            //cout<<c<<' '<<s<<'\n';
+            if(a&(1LL<<i))++c,m+=i;
         }
-        //cout<<ans<<'\n';
-        if(s==Y)
-        {
-            cout<<ans<<'\n';return;
-        }
-        if(!ok)break;
-        ++ans;
+        if(c==n)ans=min(ans,m+c-1),ok=true;
     }
-    if(s==Y)
+    if(ok)
     {
         cout<<ans<<'\n';return;
     }
