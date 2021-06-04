@@ -1,0 +1,1 @@
+{"name":"Local: university_everywher","url":"d:\\cpp\\university_everywher.cpp","tests":[{"id":1622812882057,"input":"12234","output":"1474"},{"id":1622812894921,"input":"123","output":"28"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\university_everywher.cpp","group":"local","local":true}

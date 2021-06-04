@@ -1,0 +1,1 @@
+{"name":"Local: hugging_distance","url":"d:\\cpp\\hugging_distance.cpp","tests":[{"id":1622809904681,"input":"1\n3","output":"3"},{"id":1622809909595,"input":"1\n5","output":"4"},{"id":1622810269109,"input":"1\n15","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\hugging_distance.cpp","group":"local","local":true}

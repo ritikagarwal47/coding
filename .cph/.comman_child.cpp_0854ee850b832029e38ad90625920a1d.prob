@@ -1,0 +1,1 @@
+{"name":"Local: comman_child","url":"d:\\cpp\\comman_child.cpp","tests":[{"id":1622811565638,"input":"HARRY\nSALLY","output":"2"},{"id":1622811581424,"input":"aaa\nbbc","output":"0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\comman_child.cpp","group":"local","local":true}
