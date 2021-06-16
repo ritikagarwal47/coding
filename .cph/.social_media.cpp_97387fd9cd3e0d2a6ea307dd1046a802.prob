@@ -1,0 +1,1 @@
+{"name":"Local: social_media","url":"d:\\cpp\\social_media.cpp","tests":[{"id":1623841044918,"input":"3 6\nQ 1\nM 1 2\nQ 2\nM 2 3\nQ 3\nQ 2","output":"1 \n2\n3\n3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\social_media.cpp","group":"local","local":true}
