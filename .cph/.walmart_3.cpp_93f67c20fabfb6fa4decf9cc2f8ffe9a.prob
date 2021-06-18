@@ -1,0 +1,1 @@
+{"name":"Local: walmart_3","url":"d:\\cpp\\walmart_3.cpp","tests":[{"id":1623586424753,"input":"5\n2\n1 3\n2 4","output":""},{"id":1623586439831,"input":"","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\walmart_3.cpp","group":"local","local":true}
