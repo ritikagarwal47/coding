@@ -1,0 +1,1 @@
+{"name":"Local: head_list","url":"d:\\cpp\\head_list.cpp","tests":[{"id":1624623256052,"input":"5\n05\n10\n20\n30\n40","output":"10 20 30 40"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\head_list.cpp","group":"local","local":true}

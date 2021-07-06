@@ -2,6 +2,7 @@
     "python.pythonPath": "C:\\Users\\ritik\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
     "files.associations": {
         "iostream": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "unordered_map": "cpp"
     }
 }
