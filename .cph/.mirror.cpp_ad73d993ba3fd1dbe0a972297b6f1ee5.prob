@@ -1,0 +1,1 @@
+{"name":"Local: mirror","url":"d:\\cpp\\mirror.cpp","tests":[{"id":1626246713621,"input":"5\n1 2 3 4 5","output":"3 1 4 2 5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\mirror.cpp","group":"local","local":true}

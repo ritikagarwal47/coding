@@ -1,0 +1,1 @@
+{"name":"Local: name_game","url":"d:\\cpp\\name_game.cpp","tests":[{"id":1623474469994,"input":"1\n5\nHARI HARRY LATA SARAH LALA","output":"3 2"},{"id":1623474538442,"input":"1\n4\nRAMU RAMA LISA IOM","output":"2 3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\name_game.cpp","group":"local","local":true}
