@@ -1,0 +1,1 @@
+{"name":"Local: kumpstart","url":"d:\\cpp\\kumpstart.cpp","tests":[{"id":1626433834081,"input":"6 2\n2 3\n4 6","output":"3"},{"id":1626433853622,"input":"3 0","output":"1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\kumpstart.cpp","group":"local","local":true}

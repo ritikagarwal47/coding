@@ -3,6 +3,8 @@
     "files.associations": {
         "iostream": "cpp",
         "vector": "cpp",
-        "unordered_map": "cpp"
-    }
+        "unordered_map": "cpp",
+        "algorithm": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Enabled"
 }

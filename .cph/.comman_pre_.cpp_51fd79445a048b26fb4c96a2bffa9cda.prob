@@ -1,0 +1,1 @@
+{"name":"Local: comman_pre_","url":"d:\\cpp\\comman_pre_.cpp","tests":[{"id":1626497495027,"input":"1\nababaa","output":""},{"id":1626497511035,"input":"1\nabcabcd","output":""},{"id":1626498386425,"input":"1\naa","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\comman_pre_.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: merge_dunzo","url":"d:\\cpp\\merge_dunzo.cpp","tests":[{"id":1626417278338,"input":"3\n7 1 2","output":"3"},{"id":1626417597373,"input":"2\n7 12","output":"0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\merge_dunzo.cpp","group":"local","local":true}
