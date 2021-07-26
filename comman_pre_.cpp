@@ -34,7 +34,7 @@ vector<int> commanPrefix(vector<string> inputs)
             else 
             {
                 int res = 0;
-                res = fun(cur,s);
+                //res = fun(cur,s);
                 sum+=res;
             }
             cur+=s[i];
