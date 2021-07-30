@@ -1,0 +1,1 @@
+{"name":"Local: paskal","url":"d:\\cpp\\paskal.cpp","tests":[{"id":1626074189901,"input":"4","output":""},{"id":1626074303606,"input":"5","output":""},{"id":1626074307405,"input":"6","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\paskal.cpp","group":"local","local":true}
