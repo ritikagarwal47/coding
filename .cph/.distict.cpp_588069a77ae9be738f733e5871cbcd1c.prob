@@ -1,0 +1,1 @@
+{"name":"Local: distict","url":"d:\\cpp\\distict.cpp","tests":[{"id":1627629069402,"input":"qqqqqtvdkk","output":""},{"id":1627630608612,"input":"aaabdceaaabbbcde","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\distict.cpp","group":"local","local":true}
