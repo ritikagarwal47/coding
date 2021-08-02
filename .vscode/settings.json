@@ -4,7 +4,9 @@
         "iostream": "cpp",
         "vector": "cpp",
         "unordered_map": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "xstring": "cpp",
+        "utility": "cpp"
     },
     "C_Cpp.errorSquiggles": "Enabled"
 }

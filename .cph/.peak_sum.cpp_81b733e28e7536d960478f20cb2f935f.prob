@@ -1,0 +1,1 @@
+{"name":"Local: peak_sum","url":"d:\\cpp\\peak_sum.cpp","tests":[{"id":1626615384428,"input":"7\n13 5 14 12 8 30 15","output":""},{"id":1626615415863,"input":"4\n10 7 19 4","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\peak_sum.cpp","group":"local","local":true}

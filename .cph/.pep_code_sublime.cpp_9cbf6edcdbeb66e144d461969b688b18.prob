@@ -1,0 +1,1 @@
+{"name":"Local: pep_code_sublime","url":"d:\\cpp\\pep_code_sublime.cpp","tests":[{"id":1625290204607,"input":"1\n3 3\n1 2\n2 1\n1 3","output":"YES"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\pep_code_sublime.cpp","group":"local","local":true}
