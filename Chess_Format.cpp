@@ -5,9 +5,12 @@ const int mod=1e9+7;
 //The end result of coders personal growth is,there codes becomes there documentation
 void solve()
 {
-    ll N;cin>>N;
-    ll p = (N+1)/2;
-    cout<< max(15LL,p*(5LL)) <<'\n';
+    ll a,b;cin>>a>>b;
+    ll c= a+b;
+    if(c<3)cout<<"1\n";
+    else if(c<=10)cout<<"2\n";
+    else if(c<=60)cout<<"3\n";
+    else cout<<"4\n";  
 }
 int main(void)
 {

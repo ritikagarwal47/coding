@@ -5,9 +5,10 @@ const int mod=1e9+7;
 //The end result of coders personal growth is,there codes becomes there documentation
 void solve()
 {
-    ll N;cin>>N;
-    ll p = (N+1)/2;
-    cout<< max(15LL,p*(5LL)) <<'\n';
+    ll N,K;cin>>N>>K;
+    ll n = pow(2,N);
+    ll p = min(K,n/2);
+    cout<< 2*(p*(n-1)) <<'\n';
 }
 int main(void)
 {
