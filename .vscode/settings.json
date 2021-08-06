@@ -6,7 +6,10 @@
         "unordered_map": "cpp",
         "algorithm": "cpp",
         "xstring": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "type_traits": "cpp",
+        "xlocnum": "cpp",
+        "xtr1common": "cpp"
     },
     "C_Cpp.errorSquiggles": "Enabled"
 }

@@ -1,0 +1,1 @@
+{"name":"Local: pep_coding","url":"d:\\cpp\\pep_coding.cpp","tests":[{"id":1625232302906,"input":"2\n4\n0101\n1111\n3\n011\n111","output":"2\n-1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\pep_coding.cpp","group":"local","local":true}
