@@ -1,0 +1,1 @@
+{"name":"Local: cars","url":"d:\\cpp\\cars.cpp","tests":[{"id":1628332582656,"input":"4\n2 1 5 6","output":""},{"id":1628333400982,"input":"4\n4 1 2 5","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\cars.cpp","group":"local","local":true}
