@@ -1,0 +1,1 @@
+{"name":"Local: ridhim_code","url":"d:\\cpp\\ridhim_code.cpp","tests":[{"id":1626373352868,"input":"6\n0 1 2 0 1 2","output":""},{"id":1626373415429,"input":"5\n0 2 1 1 1 0","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\ridhim_code.cpp","group":"local","local":true}
