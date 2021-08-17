@@ -1,0 +1,1 @@
+{"name":"Local: string_chain","url":"d:\\cpp\\string_chain.cpp","tests":[{"id":1626488155948,"input":"6\na b ba bca bda bdca","output":"4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\string_chain.cpp","group":"local","local":true}
