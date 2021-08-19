@@ -1,0 +1,1 @@
+{"name":"Local: track","url":"d:\\cpp\\track.cpp","tests":[{"id":1625670911253,"input":"3\n3\n1 2 3\n4\n0 1 1 0\n10\n8 3 6 11 5 2 1 7 10 4\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\track.cpp","group":"local","local":true}
