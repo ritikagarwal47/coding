@@ -9,7 +9,8 @@
         "utility": "cpp",
         "type_traits": "cpp",
         "xlocnum": "cpp",
-        "xtr1common": "cpp"
+        "xtr1common": "cpp",
+        "map": "cpp"
     },
     "C_Cpp.errorSquiggles": "Enabled"
 }
