@@ -1,0 +1,1 @@
+{"name":"Local: newton_grand1","url":"d:\\cpp\\newton_grand1.cpp","tests":[{"id":1630081419224,"input":"6 5\n2 4 3\n2 3 4\n2 1 2\n2 5 6\n1 5 2","output":"0\n2\n10\n8\n2\n-1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\newton_grand1.cpp","group":"local","local":true}

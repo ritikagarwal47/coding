@@ -1,0 +1,1 @@
+{"name":"Local: book","url":"d:\\cpp\\book.cpp","tests":[{"id":1630322362603,"input":"3 5 6 1\n1 2 3","output":"2"},{"id":1630322376453,"input":"4 40 50 10\n10 20 30 25","output":"2"},{"id":1630322412885,"input":"4 5 234 2\n10 9 12 11","output":"8"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\book.cpp","group":"local","local":true}

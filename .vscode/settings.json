@@ -10,7 +10,9 @@
         "type_traits": "cpp",
         "xlocnum": "cpp",
         "xtr1common": "cpp",
-        "map": "cpp"
+        "map": "cpp",
+        "xlocale": "cpp",
+        "queue": "cpp"
     },
     "C_Cpp.errorSquiggles": "Enabled"
 }
