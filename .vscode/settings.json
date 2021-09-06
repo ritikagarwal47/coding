@@ -12,7 +12,9 @@
         "xtr1common": "cpp",
         "map": "cpp",
         "xlocale": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "bitset": "cpp",
+        "set": "cpp"
     },
     "C_Cpp.errorSquiggles": "Enabled"
 }
