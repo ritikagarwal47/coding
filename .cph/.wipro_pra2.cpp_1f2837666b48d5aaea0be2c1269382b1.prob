@@ -1,0 +1,1 @@
+{"name":"Local: wipro_pra2","url":"d:\\cpp\\wipro_pra2.cpp","tests":[{"id":1632558919822,"input":"3521 2452 1352","output":"5"},{"id":1632560496012,"input":"2610 2359 1784","output":"9"},{"id":1632560510627,"input":"3521 2452 1352","output":"5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\wipro_pra2.cpp","group":"local","local":true}
