@@ -14,7 +14,11 @@
         "xlocale": "cpp",
         "queue": "cpp",
         "bitset": "cpp",
-        "set": "cpp"
+        "set": "cpp",
+        "list": "cpp",
+        "ios": "cpp",
+        "tuple": "cpp",
+        "cmath": "cpp"
     },
     "C_Cpp.errorSquiggles": "Enabled"
 }
