@@ -94,7 +94,6 @@ void solve()
             S+=4;
         }
     }
-    
 }
 int main(void)
 {
