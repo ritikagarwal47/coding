@@ -6,6 +6,7 @@ const int mod=1e9+7;
 void solve()
 {
     ll x;cin>>x;
+    
     cout<< x <<' '<<0<<'\n';
 }
 int main(void)
