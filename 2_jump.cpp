@@ -5,8 +5,7 @@ const int mod=1e9+7;
 //The end result of coders personal growth is,there codes becomes there documentation
 void solve()
 {
-    string s;
-    cin>>s;
+    string s;cin>>s;
     set<string> st;
     st.insert(s);
     sort(s.begin(),s.end());
