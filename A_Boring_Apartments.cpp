@@ -12,7 +12,7 @@ void solve()
     while(i<=n)
     {
         ans+=i;
-        i++;
+        
     }
     cout<<ans<<"\n";
 }
