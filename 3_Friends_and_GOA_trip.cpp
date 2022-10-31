@@ -2,7 +2,6 @@
 #define ll long long int
 using namespace std;
 const int mod=1e9+7;
-
 void solve()
 {
     ll S,D;cin>>S>>D;
