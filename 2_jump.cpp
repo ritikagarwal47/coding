@@ -12,7 +12,7 @@ void solve()
     sort(s.begin(),s.end());
     do
     {
-        st.insert(s);
+        st.insert(s)
     } while (next_permutation(s.begin(),s.end()));
     cout<<st.size()<<'\n';
 }
